@@ -301,6 +301,8 @@ gd = gf - ga
 mp = int(len(log))
 ppg = round(pts / mp, 2) if mp > 0 else 0.0
 
+#textual summary
+
 pos = int(table.loc[table["Team"] == team, "Pos"].iloc[0])
 c1, c2, c3, c4, c5 = st.columns(5)
 c1.metric("Posición", pos)
@@ -311,6 +313,7 @@ c5.metric("Forma", form)
 
 # Plots
 p1, p2 = st.columns(2, vertical_alignment="top")
+
 
 with p1:
     st.caption("Evolución de puntos acumulados")
